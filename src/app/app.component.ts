@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `{{method()}}`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'debuginspections';
+  @Input() title = 'debuginspections';
+
+  method(): number {
+    let zero = 0;
+    let one = zero + 1;
+    return one;
+  }
 }
